@@ -12,22 +12,28 @@
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .gradient-text { background: linear-gradient(to bottom, #ffffff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .btn-glow:hover { box-shadow: 0 0 20px rgba(6, 182, 212, 0.4); }
+        .client-logo { height: 45px; width: auto; filter: grayscale(100%) brightness(200%); transition: all 0.5s ease; opacity: 0.6; }
+        .client-logo:hover { filter: grayscale(0%) brightness(100%); opacity: 1; }
     </style>
 </head>
 <body class="antialiased overflow-x-hidden">
 
     <nav class="fixed top-0 w-full z-50 glass py-4 px-6 flex justify-between items-center border-b border-white/5">
-        <div class="flex items-center gap-2">
-            <div class="w-8 h-8 bg-cyan-500 rounded-lg flex items-center justify-center font-bold text-slate-900">I</div>
-            <span class="text-xl font-extrabold tracking-tighter">INVILA™</span>
+        <div class="flex items-center gap-4">
+            <img src="imageedit_3_2783022419.png" alt="Invila™ Logo" class="h-10 w-auto">
         </div>
-        <div class="hidden md:block text-[10px] uppercase tracking-[0.2em] font-semibold text-cyan-400">
+        <div class="text-[10px] md:text-xs uppercase tracking-[0.2em] font-semibold text-cyan-400">
             Analitik Sistem Terintegrasi
         </div>
     </nav>
 
-    <header class="relative min-h-screen flex flex-col justify-center items-center px-6 pt-32 pb-12 text-center overflow-hidden">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-[800px] max-h-[800px] bg-cyan-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+    <header class="relative min-h-screen flex flex-col justify-center items-center px-6 pt-32 pb-12 text-center overflow-hidden border-b border-white/5">
+        <div class="absolute inset-0 z-0">
+            <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-20">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-technology-connection-background-28406-large.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900/60 to-slate-950"></div>
+        </div>
 
         <div class="relative z-10 max-w-5xl w-full">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border-cyan-500/20 mb-8">
@@ -41,19 +47,19 @@
             
             <h2 class="text-xl md:text-2xl font-bold text-cyan-500 mb-8 italic">Implementasi WaaS — Utilitas Mandiri.</h2>
 
-            <p class="text-xs md:text-lg text-slate-400 max-w-3xl mx-auto mb-12 leading-relaxed">
+            <p class="text-xs md:text-lg text-slate-400 max-w-3xl mx-auto mb-12 leading-relaxed px-4">
                 Invila™ merancang, membangun, mendanai, dan mengoperasikan sistem SPAM privat dengan teknologi <span class="text-white font-semibold italic underline decoration-cyan-500/30">SCADA-IoT</span>. <br class="hidden md:block">
-                Tanpa CAPEX miliaran rupiah — <span class="text-cyan-400 font-bold">Anda hanya membayar air yang digunakan.</span>
+                Tanpa CAPEX miliaran rupiah — <span class="text-cyan-400 font-bold">Anda hanya membayar air yang digunakan</span>.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-16 px-4">
                 <div class="glass p-6 rounded-2xl border-white/5">
                     <div class="text-3xl font-extrabold text-cyan-500 mb-1">0%</div>
                     <div class="text-[10px] uppercase tracking-widest font-bold text-slate-500 italic">Capex Investment</div>
                 </div>
-                <div class="glass p-6 rounded-2xl border-white/5">
+                <div class="glass p-6 rounded-2xl border-white/5 border-l-cyan-500/50">
                     <div class="text-3xl font-extrabold text-cyan-500 mb-1">24/7</div>
-                    <div class="text-[10px] uppercase tracking-widest font-bold text-slate-500 italic">Autonomous Monitoring</div>
+                    <div class="text-[10px] uppercase tracking-widest font-bold text-slate-500 italic">SCADA-IoT Autonomous Monitoring</div>
                 </div>
                 <div class="glass p-6 rounded-2xl border-white/5">
                     <div class="text-3xl font-extrabold text-cyan-500 mb-1">100%</div>
@@ -61,7 +67,7 @@
                 </div>
             </div>
 
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
                 <a href="https://wa.me/6285219493322" class="w-full sm:w-auto px-10 py-4 bg-cyan-600 rounded-xl font-bold text-sm text-slate-950 hover:bg-cyan-500 transition-all btn-glow flex items-center justify-center gap-2">
                     <i class="fab fa-whatsapp text-lg"></i> KONSULTASI GRATIS
                 </a>
@@ -72,52 +78,82 @@
         </div>
     </header>
 
-    <section class="py-20 px-6 border-t border-white/5 bg-slate-900/50">
-        <div class="max-w-6xl mx-auto text-center">
-            <p class="text-[10px] uppercase tracking-[0.3em] text-slate-500 mb-12 font-bold">Dipercaya oleh Pemimpin Industri</p>
-            <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
-                <span class="text-xs md:text-sm font-black tracking-tighter">UNITED TRACTORS</span>
-                <span class="text-xs md:text-sm font-black tracking-tighter italic text-cyan-400">PETROKIMIA GRESIK</span>
-                <span class="text-xs md:text-sm font-black tracking-tighter underline">KIEVIT</span>
-                <span class="text-xs md:text-sm font-black tracking-tighter">KIW SEMARANG</span>
-                <span class="text-xs md:text-sm font-black tracking-tighter">TIRTANADI MEDAN</span>
-                <span class="text-xs md:text-sm font-black tracking-tighter">PDAM DEPOK</span>
+    <section class="py-20 px-6 bg-slate-900/50 border-b border-white/5">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-slate-500 mb-12 font-bold italic">Dipercaya oleh Pemimpin Industri</p>
+            <div class="flex flex-wrap justify-center items-center gap-10 md:gap-16">
+                <img src="united-tractors-logo-png_seeklogo-392218.png" alt="United Tractors" class="client-logo">
+                <img src="Petrokimia_Gresik_logo.svg.png" alt="Petrokimia Gresik" class="client-logo">
+                <img src="Tirtanadi.jpg" alt="Tirtanadi Medan" class="client-logo">
+                <img src="KIEVIT.png" alt="Kievit" class="client-logo">
+                <img src="KIW.png" alt="KIW Semarang" class="client-logo">
+                <img src="Patria Maritim Perkasa.png" alt="Patria Maritim Perkasa" class="client-logo">
             </div>
         </div>
     </section>
 
     <section class="py-24 px-6 glass border-y border-white/5">
         <div class="max-w-4xl mx-auto">
-            <h3 class="text-2xl font-extrabold mb-12 text-center text-cyan-500 italic">Smart Automation Features & Scenarios</h3>
-            <div class="space-y-6">
+            <h3 class="text-2xl font-extrabold mb-12 text-center text-cyan-500 italic uppercase tracking-widest">Smart Automation Features (SCADA-IoT)</h3>
+            <div class="grid grid-cols-1 gap-6">
                 <div class="p-6 glass rounded-2xl border-l-4 border-cyan-500">
-                    <h4 class="font-bold mb-2">1. Real-Time Dashboard (IoT & SCADA)</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Pelacakan pH, TDS, Turbiditas, COD, dan running hours pompa secara transparan melalui OWD Bar Graphs.</p>
+                    <h4 class="font-bold mb-3 text-white uppercase text-sm tracking-wider tracking-normal">1. Real-Time Dashboard (SCADA-IoT)</h4>
+                    <ul class="text-[11px] md:text-xs text-slate-400 space-y-2">
+                        <li>• Pelacakan real-time pH, TDS, Turbiditas, COD, dan stok reservoar secara otonom.</li>
+                        <li>• Visualisasi Level OWD (Over Water Depth) dengan batas peringatan kritis 330-350 mm.</li>
+                        <li>• Status Operasional: Green (Running), Red (Fault), Grey (Standby) dengan sistem Running Hours.</li>
+                    </ul>
                 </div>
                 <div class="p-6 glass rounded-2xl border-l-4 border-cyan-500">
-                    <h4 class="font-bold mb-2">2. Auto-Dosing (Flow Proportional)</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Dosis kimia otomatis menyesuaikan debit intake (4-20mA) dan koreksi turbiditas secara instan.</p>
+                    <h4 class="font-bold mb-3 text-white uppercase text-sm tracking-wider tracking-normal">2. Auto-Dosing Adjustment (SCADA-IoT Driven)</h4>
+                    <ul class="text-[11px] md:text-xs text-slate-400 space-y-2">
+                        <li>• Sinkronisasi Aliran: SCADA-IoT membaca sinyal 4-20mA dari flow meter intake secara presisi.</li>
+                        <li>• Kecepatan dosing otomatis skala naik/turun sesuai volume intake melalui kontrol cerdas.</li>
+                        <li>• Koreksi Turbiditas: Peningkatan PPM otomatis seketika saat sensor mendeteksi kekeruhan tinggi.</li>
+                    </ul>
                 </div>
                 <div class="p-6 glass rounded-2xl border-l-4 border-cyan-500">
-                    <h4 class="font-bold mb-2">3. Auto-Backwash (OWD Triggered)</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Pembersihan filter otomatis berbasis head loss (350 mm) dengan sekuens PLC terkendali.</p>
+                    <h4 class="font-bold mb-3 text-white uppercase text-sm tracking-wider tracking-normal">3. Auto-Backwash (SCADA-IoT Sequential Control)</h4>
+                    <ul class="text-[11px] md:text-xs text-slate-400 space-y-2">
+                        <li>• Deteksi Head Loss otomatis pada 350 mm melalui algoritma SCADA-IoT.</li>
+                        <li>• Sekuens Pembersihan: Proses Drawdown, Air Scour, Water Wash, dan Settling tanpa intervensi.</li>
+                        <li>• Filter-to-Waste: Pengalihan otomatis air awal pasca-backwash untuk menjamin kejernihan.</li>
+                    </ul>
+                </div>
+                <div class="p-6 glass rounded-2xl border-l-4 border-cyan-500">
+                    <h4 class="font-bold mb-3 text-white uppercase text-sm tracking-wider tracking-normal">4. Automated Batching (Stock Management)</h4>
+                    <ul class="text-[11px] md:text-xs text-slate-400 space-y-2">
+                        <li>• Interlock Stok Cerdas: Sistem berhenti otomatis melalui SCADA-IoT jika stok larutan < 10%.</li>
+                        <li>• Batching Otonom: Pemicu otomatis siklus pengisian air, penimbangan bubuk, dan Aging Phase.</li>
+                    </ul>
+                </div>
+                <div class="p-6 glass rounded-2xl border-l-4 border-cyan-500">
+                    <h4 class="font-bold mb-3 text-white uppercase text-sm tracking-wider tracking-normal">5. Smart Fail-Over & Safety Protection</h4>
+                    <ul class="text-[11px] md:text-xs text-slate-400 space-y-2">
+                        <li>• Auto-Swap: Pengaturan pergantian pompa setiap 8-12 jam melalui sistem SCADA-IoT.</li>
+                        <li>• Automatic Fail-Over: Aktivasi instan pompa standby jika sistem mendeteksi kegagalan unit aktif.</li>
+                        <li>• Proteksi Mekanis: Sistem Anti-Water Hammer dan Dry-Run melalui kontrol delay cerdas.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-16 px-6 text-center">
-        <div class="mb-8">
-            <a href="https://github.com/invilawatertreatment-blip/invila-odometer" target="_blank" class="glass px-6 py-3 rounded-full text-[10px] inline-flex items-center gap-3 border-cyan-500/30 hover:bg-white/5 transition-all">
+    <footer class="py-16 px-6 text-center border-t border-white/5">
+        <div class="mb-10">
+            <a href="https://github.com/invilawatertreatment-blip/invila-odometer" target="_blank" class="glass px-6 py-3 rounded-full text-[10px] inline-flex items-center gap-3 border-cyan-500/30 hover:bg-white/5 transition-all shadow-lg">
                 <i class="fab fa-github text-lg text-white"></i> 
-                <span>Kapasitas Terpasang s/d 28 Feb 2026: <span class="font-black text-cyan-400 underline italic">invila-odometer</span></span>
+                <span>Kapasitas Terpasang s/d 28 Feb 2026 tervalidasi: <span class="font-black text-cyan-400 underline italic">invila-odometer</span></span>
             </a>
         </div>
-        <p class="text-[10px] text-slate-600 tracking-widest font-bold">© 2026 PT INVILA WATER TREATMENT. ALL RIGHTS RESERVED.</p>
+        <div class="text-[10px] text-slate-500 flex flex-col gap-2">
+            <p class="font-bold tracking-widest uppercase italic text-cyan-600/50">Jaminan Baku Mutu Tervalidasi Lab Terakreditasi KAN</p>
+            <p>© 2026 INVILA™. ALL RIGHTS RESERVED.</p>
+        </div>
     </footer>
 
-    <a href="https://wa.me/6285219493322?text=Halo%20Invila,%20saya%20ingin%20diskusi%20model%20Zero%20Capex%20untuk%20sistem%20WTP/WWTP%20kami." class="fixed bottom-6 right-6 z-50 bg-green-500 w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-transform shadow-green-500/30">
-        <i class="fab fa-whatsapp text-3xl text-white"></i>
+    <a href="https://wa.me/6285219493322?text=Halo%20Invila,%20saya%20ingin%20diskusi%20model%20Zero%20Capex%20untuk%20sistem%20WTP/WWTP%20kami." class="fixed bottom-6 right-6 z-50 bg-green-500 w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-transform shadow-green-500/40 text-white">
+        <i class="fab fa-whatsapp text-3xl"></i>
     </a>
 
 </body>
