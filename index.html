@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMI Dashboard - Invila TM</title>
+    <style>
+        :root {
+            --primary-blue: #0056b3;
+            --bg-light: #f4f7f6;
+            --card-bg: #ffffff;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: var(--bg-light);
+        }
+        header {
+            background: var(--card-bg);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .logo-container {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .logo-main { height: 60px; }
+        .logo-client { height: 50px; }
+        
+        .status-panel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid var(--primary-blue);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .tag {
+            background: #e1f5fe;
+            color: #01579b;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="Logo Utama Invila.png" alt="Invila TM Logo" class="logo-main">
+        
+        <img src="kievit.png" alt="Kievit Logo" class="logo-client">
+        <img src="Petrokimia_Gresik_logo.svg" alt="Petrokimia Gresik Logo" class="logo-client">
+    </div>
+    <div>
+        <span class="tag">SYSTEM: SCADA-IOT</span>
+    </div>
+</header>
+
+<main>
+    <div style="padding: 20px 20px 0 20px;">
+        <h2>Monitoring Real-time (WTP / WWTP)</h2>
+    </div>
+    
+    <section class="status-panel">
+        <div class="card">
+            <h3>Inlet Flow</h3>
+            <p style="font-size: 2rem; margin: 10px 0;">45.2 <small>m³/h</small></p>
+            <span style="color: green;">● Online</span>
+        </div>
+
+        <div class="card">
+            <h3>Water Quality (pH)</h3>
+            <p style="font-size: 2rem; margin: 10px 0;">7.2</p>
+            <span style="color: green;">● Stable</span>
+        </div>
+
+        <div class="card">
+            <h3>Scada-IoT Gateway</h3>
+            <p>Status: Active</p>
+            <p>Last Sync: Just now</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    &copy; 2026 <strong>Invila TM</strong> - Zero Capex Water Infrastructure
+</footer>
+
+</body>
+</html>
